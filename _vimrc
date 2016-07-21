@@ -12,7 +12,6 @@ syntax enable
 let $LANG='en'
 set autoindent
 set autoread
-set background=dark
 set backspace=indent,eol,start
 set clipboard=unnamed
 set complete+=kspell
@@ -20,6 +19,7 @@ set cursorline
 set encoding=utf8
 set expandtab
 set guifont=Consolas:h10.5
+set guifontwide=NSimsun
 set guioptions+=a
 set guioptions-=L
 set guioptions-=T
