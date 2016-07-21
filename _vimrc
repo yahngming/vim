@@ -1,6 +1,7 @@
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 autocmd BufWritePre * :%s/\s\+$//e
+autocmd FileType markdown setlocal spell
 autocmd GUIEnter * set visualbell t_vb= | simalt ~x
 autocmd VimLeave * mksession! $HOME/Session.vim
 colorscheme desert
@@ -14,6 +15,7 @@ set autoread
 set background=dark
 set backspace=indent,eol,start
 set clipboard=unnamed
+set complete+=kspell
 set cursorline
 set encoding=utf8
 set expandtab
@@ -31,14 +33,13 @@ set incsearch
 set langmenu=en
 set laststatus=2
 set lazyredraw
+set linebreak
 set nobackup
 set noerrorbells
 set noswapfile
-set nowb
-set ruler
+set nowritebackup
 set scrolloff=6
 set shiftwidth=4
-set showcmd
 set showmatch
 set showtabline=2
 set smartcase
@@ -48,12 +49,11 @@ set statusline+=%2*\ %y\ %*
 set statusline+=%3*%=
 set statusline+=%4*\ %{&ff}\ %*
 set statusline+=%5*\ %{''.(&fenc!=''?&fenc:&enc).''}\ %*
-set statusline+=%6*\ %l/%L\ %*
-set t_Co=256
+set statusline+=%6*\ %c,%l/%L\ %*
 set t_vb=
 set tabstop=4
 set visualbell
-set whichwrap+=<,>,h,l
+set whichwrap+=<,>,[,]
 set wildmenu
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
