@@ -73,6 +73,7 @@ map <C-l> <C-W>l
 map <Space> <Leader>
 nnoremap <F11> :source $HOME/Session.vim<CR>
 nnoremap <F12> :args $MYVIMRC $HOME/OneDrive/Programs/AutoHotkey/AutoHotkey.ahk \| tab all<CR>
+nnoremap <F7> :setlocal spell!<CR>
 nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
 nnoremap j gj
 nnoremap k gk
